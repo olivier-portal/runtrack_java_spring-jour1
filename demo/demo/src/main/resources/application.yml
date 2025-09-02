@@ -2,7 +2,7 @@ spring:
   application:
     name: demo
   profiles:
-    active: prod
+    active: dev
 ---
 spring:
   config:
