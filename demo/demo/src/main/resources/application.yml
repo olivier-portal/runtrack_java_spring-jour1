@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: demo
+
+greetings:
+  message: Hello, World! I'm writting from the application.yml file.
