@@ -1,6 +1,20 @@
 spring:
   application:
     name: demo
-
+  profiles:
+    active: prod
+---
+spring:
+  config:
+      activate:
+        on-profile: dev
 greetings:
-  message: Hello, World! I'm writting from the application.yml file.
+    message: Hello, Developer! I'm writing from the application.yml file.
+---
+spring:
+  config:
+      activate:
+        on-profile: prod
+greetings:
+  message: Hello, User! I'm writing from the application.yml file.
+
