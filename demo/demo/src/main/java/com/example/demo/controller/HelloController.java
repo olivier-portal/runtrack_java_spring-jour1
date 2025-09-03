@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class HelloController {
 
     @Value("${greetings.message}")
-    private String greetingMessage;
+    private String greetingMessage; 
 
     @GetMapping("/")
     @ResponseBody
