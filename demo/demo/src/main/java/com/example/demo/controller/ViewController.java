@@ -37,10 +37,6 @@ public class ViewController {
     public String handleForm(@Valid @ModelAttribute("formData") FormData formData,
                              BindingResult errors,
                              Model model) {
-        // Ré-alimente le modèle
-        model.addAttribute("message", "Bienvenue sur la page view, inscrivez-vous !");
-        model.addAttribute("mots", List.of("ça me saoule grave", "Olivier", "Toulon", "Adeline", "Blabla"));
-
         if (errors.hasErrors()) {
             return "view";
         }
