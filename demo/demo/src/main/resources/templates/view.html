@@ -24,5 +24,22 @@
 <ul>
     <li th:each="person : ${persons}" th:text="${person.name} + ' a ' + ${person.age} + ' ans.'">Personne par défaut</li>
 </ul>
+
+<ul>
+  <li th:each="person : ${persons}">
+    <!-- Formulaire de mise à jour -->
+    <form th:action="@{|/persons/${person.id}/update|}" method="post" style="display:inline;">
+      <input type="text" name="name" th:value="${person.name}" />
+      <input type="number" name="age" th:value="${person.age}" />
+      <button type="submit">Mettre à jour</button>
+    </form>
+
+    <!-- Formulaire de suppression -->
+    <form th:action="@{|/persons/${person.id}/delete|}" method="post" style="display:inline;">
+      <button type="submit" onclick="return confirm('Supprimer cette personne ?')">Supprimer</button>
+    </form>
+  </li>
+</ul>
+
 </body>
 </html>
